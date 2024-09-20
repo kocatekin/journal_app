@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>journal</title>
+<style>html{-webkit-text-size-adjust:100%;padding-bottom:4em}body{font-family:sans-serif;line-height:1.5em;max-width:40em;padding:0 2%;margin:auto}.text-input{width:96%;display:block;padding:.5em 1%;margin-bottom:1.5em;font-size:1em}fieldset{margin-bottom:1.5em}textarea{height:30em}dt{font-weight:bold}.important{color:red}.footer{text-align:right}.centered{text-align:center}.nope{display:none}.ad-container{float:left;min-width:33%}</style>
+</head>
+<body>
+
+<h1>New Entry</h1>
+<div id="toggle">
+	<form action="/ekle" method="post">
+		<textarea name="icerik" rows="100" cols="50" placeholder="Enter here"></textarea>
+		<br>
+		<button type="submit">ekle</button>
+	</form>
+</div>
+
+{% for d in data %}
+
+	<li>{{d['post_date']}} - {{d['post_hour']}} | <a href="/oku/{{ d['post_id'] }}">{{d['text']}}</a></li>
+
+
+{% endfor %}
+</body>
+
+<script>
+
+</script>
+
+</html>
+
+
+

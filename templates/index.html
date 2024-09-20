@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .left-panel {
+            width: 25%;
+            background-color: #2e2e2e;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-panel h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #ff9800;
+        }
+
+        .new-post-link {
+            display: block;
+            color: #ff9800;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .new-post-link:hover {
+            text-decoration: underline;
+        }
+
+        .entry-preview {
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .entry-preview .date {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .entry-preview .text-preview {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .right-panel {
+            width: 75%;
+            padding: 20px;
+            background-color: white;
+            overflow-y: auto;
+        }
+
+        .entry-content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .entry-content h3 {
+            margin-top: 0;
+        }
+
+        .entry-content textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .entry-content button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .entry-content button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="left-panel">
+        <h2>My Diaries</h2>
+        <a href="#" class="new-post-link">Write a New Post</a>
+        <div class="entry-preview">
+            <div class="date">September 19, 2024</div>
+            <div class="text-preview">This is a preview of my diary entry, it will show up to 50 characters...</div>
+        </div>
+        <div class="entry-preview">
+            <div class="date">September 18, 2024</div>
+            <div class="text-preview">Another diary entry preview showing the first 50 characters...</div>
+        </div>
+        <!-- More entries can go here -->
+    </div>
+
+    <div class="right-panel">
+        <div class="entry-content">
+            <h3>September 19, 2024</h3>
+            <textarea>This is the full content of the selected diary entry. You can edit or write your diary here.</textarea>
+            <button>Save Entry</button>
+        </div>
+    </div>
+
+</body>
+</html>
