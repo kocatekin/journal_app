@@ -7,7 +7,3 @@
 
 * Add statistics
 
-
-# Bugs
-
-* The date should come from the HTML page. 
