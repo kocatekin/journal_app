@@ -8,7 +8,7 @@ import secrets
 app = Flask(__name__)
 
 DBNAME = "gunluk.db"
-curDateTime = datetime.datetime.now()
+curDateTime = datetime.datetime.now() #rookie mistake. i was using this in /ekle. commented it out as a reminder
 
 app.secret_key = secrets.token_hex(32)
 
@@ -58,7 +58,8 @@ def login():
 @login_required
 def ekle():
     icerik = request.form['icerik']
-    tarih = curDateTime
+    #tarih = curDateTime  #does not recalculate. tarih was set when the app is run.
+    tarih = datetime.datetime.now()
     conn = sqlite3.connect(DBNAME)
     c = conn.cursor()
     c.execute("insert into gunluk(tarih, icerik) values(?, ?)", (tarih, icerik))
